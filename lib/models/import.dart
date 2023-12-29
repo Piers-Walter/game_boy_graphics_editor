@@ -44,7 +44,7 @@ onImportHttp(BuildContext context, String parse, String type, bool transpose, St
 onImport(BuildContext context, String parse, String type, bool transpose,
     String compression) {
   bool tile = parse == 'Tile';
-  selectFile(['*']).then((result) {
+  selectFile().then((result) {
     if (result != null) {
       if(type == 'Auto'){
         type = resolveType(result.files.single.name);
